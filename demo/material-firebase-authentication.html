@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <title>material-firebase-authentication demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+
+    <link rel="import" href="../material-firebase-authentication.html">
+    <link rel="import" href="../../polymerfire/firebase-app.html">
+
+    <style is="custom-style" include="demo-pages-shared-styles">
+    </style>
+  </head>
+  <body>
+
+    <firebase-app api-key="AIzaSyBPurb3fZUIbmVqMB-OGKF2L9KDNxAIZkM"
+                  auth-domain="material-firebase-auth.firebaseapp.com"
+                  database-url="https://material-firebase-auth.firebaseio.com"
+                  storage-bucket="material-firebase-auth.appspot.com"></firebase-app>
+
+    <div class="vertical-section-container centered">
+      <h3>Basic Demo</h3>
+      <demo-snippet>
+        <template>
+          <material-firebase-authentication></material-firebase-authentication>
+        </template>
+      </demo-snippet>
+    </div>
+
+    <div class="vertical-section-container centered">
+      <h3>Set page to signup</h3>
+      <demo-snippet>
+        <template>
+          <material-firebase-authentication page="signup"></material-firebase-authentication>
+        </template>
+      </demo-snippet>
+    </div>
+
+    <div class="vertical-section-container centered">
+      <h3>Set page to sign out</h3>
+      <demo-snippet>
+        <template>
+          <material-firebase-authentication page="signout"></material-firebase-authentication>
+        </template>
+      </demo-snippet>
+    </div>
+
+  </body>
+</html>
